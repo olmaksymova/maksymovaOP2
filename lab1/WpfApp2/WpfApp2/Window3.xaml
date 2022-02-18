@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfApp2.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Хрестики-нулики" Height="130" Width="215">
+    <Grid Name="LayoutRoot" Background="LightSkyBlue">
+        <Button Name ="Exit" Background="LightSalmon" BorderThickness="0"   Content="Назад" HorizontalAlignment="Left" Height="23" Margin="108,58,0,0" VerticalAlignment="Top" Width="73" Click="Exit_Click" FontSize="14" FontWeight="Bold" FontFamily="Thames"/>
+        <Button BorderThickness="0" x:Name="Ok" Background="LightGreen"  Content="ОК" HorizontalAlignment="Left" Height="24" Margin="14,58,0,0" VerticalAlignment="Top" Width="62" FontSize="14" FontWeight="Bold" FontFamily="Thames" Click="Ok_Click"/>
+        <Label Content="Розмір поля: " Margin="4,11,64,50" FontSize="16" FontWeight="Bold" FontFamily="Century Gothic" RenderTransformOrigin="0.416,0.395"/>
+        <TextBox TextAlignment="Center" x:Name="Counter" Background="Beige" HorizontalAlignment="Left" Margin="121,17,0,0" Text="" Width="67" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" FontSize="16"/>
+
+    </Grid>
+</Window>

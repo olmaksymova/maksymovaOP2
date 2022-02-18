@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfApp2.Window4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Window4" Height="470" Width="514">
+    <Grid Margin="0,0,0,0" Background="LightSkyBlue">
+        <TextBlock Name="Data" Background="Beige" HorizontalAlignment="Center" Height="237" Margin="0,57,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="466" FontSize="14" FontFamily="Calibri" FontWeight="Bold"/>
+
+        <Button Name ="AddStudent" Background="LightGreen" Content="Додати студента" HorizontalAlignment="Left" Height="46" Margin="23,310,0,0" VerticalAlignment="Top" Width="225" Click="AddStudent_Click" TextBlock.FontSize="14" TextBlock.FontFamily="Thames" TextBlock.FontWeight="Bold" FontFamily="Century Gothic"/>
+        <Button Name ="DeleteStudent" Background="LightGreen" Content="Видалити студента" HorizontalAlignment="Left" Height="46" Margin="262,310,0,0" VerticalAlignment="Top" Width="225" Click="DeleteStudent_Click" TextBlock.FontSize="14" TextBlock.FontFamily="Thames" TextBlock.FontWeight="Bold" FontFamily="Century Gothic"/>
+        <Button Name="Exit" Content="На головну" Background="Salmon" HorizontalAlignment="Left" Margin="-8,385,0,0" Width="525" Height="51" VerticalAlignment="Top" Click="Exit_Click" TextBlock.FontSize="14" TextBlock.FontFamily="Thames" TextBlock.FontWeight="Bold" FontFamily="Century Gothic"/>
+        <Label Content="Студенти" Margin="196,12,54,389" FontSize="20" FontWeight="Bold" FontFamily="Century Gothic"/>
+
+    </Grid>
+</Window>

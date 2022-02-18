@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfApp2.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Window2" Height="499" Width="595" Background="LightSkyBlue">
+    <Grid Name ="LayoutRoot" Height="483" VerticalAlignment="Bottom" Background="LightSkyBlue">
+
+        <Button Name="ToMainWindow" Content="Назад" Background="Salmon" HorizontalAlignment="Left" Height="50" Margin="2,417,0,0" VerticalAlignment="Top" Width="582" Click="ToMainWindow_Click" FontSize="16" FontFamily="Arial Black" FontWeight="Bold"/>
+        <Button Name ="Run"  Content="Зіграти знову" Background="Aquamarine" HorizontalAlignment="Center" Height="49" Margin="0,360,0,0" VerticalAlignment="Top" Width="592" Click="CreateField_Click" FontSize="16" FontFamily="Arial Black" FontWeight="Bold"/>
+        <TextBlock Name="Turn"  TextAlignment="Center" HorizontalAlignment="Center" Height="45" Margin="0,0,0,0" Text="Gamer 2" TextWrapping="Wrap" VerticalAlignment="Top" Width="592" FontSize="22" FontWeight="Bold" FontFamily="Arial Black"/>
+
+    </Grid>
+</Window>

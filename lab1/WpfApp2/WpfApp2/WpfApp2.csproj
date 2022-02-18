@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="delete.png" />
+    <None Remove="за.jpg" />
+    <None Remove="мат.jpg" />
+    <None Remove="Снимок экрана 2022-02-07 112616.jpg" />
+    <None Remove="Снимок экрана 2022-02-07 112852.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="delete.png" />
+    <Resource Include="за.jpg" />
+    <Resource Include="мат.jpg" />
+    <Resource Include="Снимок экрана 2022-02-07 112616.jpg" />
+    <Resource Include="Снимок экрана 2022-02-07 112852.jpg" />
+  </ItemGroup>
+
+</Project>
