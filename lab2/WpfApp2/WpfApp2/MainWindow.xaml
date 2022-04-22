@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="180" Width="405" Background="LightSkyBlue">
+    <Grid>
+        <ComboBox x:Name="MyComboBox" HorizontalAlignment="Left" Height="31" Margin="186,54,0,0" VerticalAlignment="Top" Width="176" FontSize="18" FontStyle="Normal" FontFamily="Comic Sans MS">
+            <ComboBoxItem Content="Калькулятор"/>
+            <ComboBoxItem Content="Хрестики-нулики"/>
+            <ComboBoxItem Content="База даних"/>
+            <ComboBoxItem Content="Про автора"/>
+
+        </ComboBox>
+        <Button Content="ОК" Background="LightGreen" HorizontalAlignment="Left" Height="28" Margin="42,105,0,0" VerticalAlignment="Top" Width="112" Click="Button_Click" FontFamily="Comic Sans MS" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Оберіть додаток: " Margin="14,47,202,57"  FontFamily="Comic Sans MS" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Головне меню" Margin="110,3,113,103"  FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="22" RenderTransformOrigin="0.5,0.5"/>
+        <Button Background="Salmon" Content="Вийти" HorizontalAlignment="Left" Name="Exit" Height="28" Margin="241,105,0,0" VerticalAlignment="Top" Width="112" FontFamily="Comic Sans MS" FontSize="16" FontWeight="Bold" Click="Exit_Click"/>
+
+    </Grid>
+</Window>
