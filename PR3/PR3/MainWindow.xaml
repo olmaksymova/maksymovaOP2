@@ -1,0 +1,44 @@
+﻿<Window x:Class="PR3.MainWindow"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+xmlns:local="clr-namespace:PR3"
+mc:Ignorable="d"
+Title="Максимова О.В. 2022. Основи програмування. Практична робота № 3."
+
+Height="199.968" Width="761.995"
+WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <Grid Background="LightBlue" >
+        <Button x:Name="AdminMode" Content="Вхід"
+HorizontalAlignment="Left" Margin="33,60,0,0"
+VerticalAlignment="Top" Width="232" Height="38" FontSize="18"
+
+
+
+Click="AdminMode_Click" FontFamily="Comic Sans MS"/>
+        <Label Content="Розмежування повноважень користувачів на основі
+парольної автентифікації" HorizontalAlignment="Left"
+Margin="17.2,-3.6,0,0" VerticalAlignment="Top" Height="71.933"
+Width="723.2" FontFamily="Book Antiqua" FontSize="18"
+FontWeight="Bold" Grid.IsSharedSizeScope="True"
+HorizontalContentAlignment="Center"
+VerticalContentAlignment="Center" UseLayoutRounding="False"/>
+
+        <Button x:Name="UserMode" Content="Реєстрація"
+HorizontalAlignment="Left" Margin="289,60,0,0"
+VerticalAlignment="Top" Width="232" Height="38" FontSize="18" FontFamily="Comic Sans MS"
+Click="UserMode_Click"/>
+
+        <Button x:Name="UserMode_Copy" Content="Закрити додаток"
+HorizontalAlignment="Left" Margin="23,116,0,0" BorderThickness="2"
+VerticalAlignment="Top" Width="704" Height="36" FontSize="18" FontFamily="Comic Sans MS"
+Click="UserMode_Copy_Click" Background="#FFFF6262"/>
+
+        <Button x:Name="AboutDev" Content="Про розробника"
+HorizontalAlignment="Left" Margin="544,60,0,0"
+VerticalAlignment="Top" Width="173" Height="38" FontSize="18" FontFamily="Comic Sans MS"
+Click="AboutDev_Click"/>
+    </Grid>
+</Window>

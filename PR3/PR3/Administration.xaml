@@ -1,0 +1,31 @@
+﻿<Window x:Class="PR3.Administration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR3"
+        mc:Ignorable="d"
+        Title="Administration" Height="282.2" Width="394.4">
+    <Grid Background="#FF86B8F7" >
+        <Button x:Name="ChangePass" Content="Змінити дані"
+            HorizontalAlignment="Left" Margin="33,59,0,0"
+            VerticalAlignment="Top" Width="326" Height="36" FontSize="18" FontFamily="Comic Sans MS" Click="ChangePass_Click"
+            />
+        <Button x:Name="UsersView" Content="Переглянути користувачів"
+            HorizontalAlignment="Left" Margin="33,104,0,0"
+            VerticalAlignment="Top" Width="326" Height="36" FontSize="18" FontFamily="Comic Sans MS" Click="UsersView_Click"
+            />
+        <Button x:Name="UserAdd" Content="Додати користувача"
+            HorizontalAlignment="Left" Margin="33,149,0,0"
+            VerticalAlignment="Top" Width="326" Height="36" FontSize="18" FontFamily="Comic Sans MS" Click="UserAdd_Click"
+            />
+        <Button x:Name="ToMainWindow" Content="На головну"
+            HorizontalAlignment="Left" Margin="33,194,0,0"
+            VerticalAlignment="Top" Width="326" Height="36" FontSize="18" FontFamily="Comic Sans MS"
+                Background="#FFFF6262" Click="ToMainWindow_Click"
+            />
+        <Label Content="Режим адміністратора" HorizontalAlignment="Left" Margin="68,16,0,0"
+               VerticalAlignment="Top" FontSize="22" FontFamily="Microsoft Sans Serif" Width="255" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
