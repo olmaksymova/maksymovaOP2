@@ -1,0 +1,78 @@
+﻿<Window x:Class="CourseWork.FindDealers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork"
+        mc:Ignorable="d"
+        Title="Запити" Height="599.02" Width="867.348">
+    <Grid Background="AliceBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="28*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#7F8C64A5" HorizontalAlignment="Right" Height="339" Margin="0,163,5.8,0" Stroke="Black" VerticalAlignment="Top" Width="845" Grid.ColumnSpan="2"/>
+
+        <DataGrid x:Name="DataGrid1" IsReadOnly="True" HorizontalAlignment="Left"
+            Height="227" Margin="23,263,0,0" VerticalAlignment="Top"
+            Width="405" Grid.ColumnSpan="2" ></DataGrid>
+
+        <ComboBox x:Name="CitiesCB" HorizontalAlignment="Left"
+            Margin="168,179,0,0" VerticalAlignment="Top" Width="200" 
+           Height="29" FontSize="18" FontFamily="Times New Roman" DropDownClosed="CitiesCB_DropDownClosed" Grid.ColumnSpan="2" />
+        <Button x:Name="ToStartwindow" Content="На головну"
+            Margin="0,508,4.8,0" VerticalAlignment="Top"
+            Height="50" Foreground="White" FontSize="24"
+            FontFamily="Book Antiqua" FontWeight="Bold"
+            Click="ToStartWindow_Click" BorderBrush="Black" OpacityMask="#FF1278BE" Background="#FF1776BB" HorizontalAlignment="Right" Width="846" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="editTable" Margin="-4,0,0.8,0"
+            TextWrapping="Wrap" VerticalAlignment="Top" Height="55" FontSize="36" TextAlignment="Center"
+            FontFamily="Book Antiqua" FontWeight="Bold"
+            Foreground="White" Text="Дані запитів" Grid.ColumnSpan="2">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="270" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF0C7BC1" Offset="0"/>
+                    <GradientStop Color="#FFBC0C3C" Offset="1"/>
+                    <GradientStop Color="#FF85477E" Offset="0.5"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <Rectangle Fill="#4C2B2B83" Height="101" Margin="0,61,6.8,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Right" Width="845" Grid.ColumnSpan="2"/>
+
+        <Label Name="label1"  Content="Дилер з найбільшим прибутком:" HorizontalAlignment="Left" Margin="37,64,0,0"
+            VerticalAlignment="Top"  
+            FontFamily="Georgia" FontSize="16"
+            Width="743" FontWeight="Bold" Height="34" Grid.ColumnSpan="2" />
+        <Label Name="label2"  Content="Дилер з макс. комісійними:" HorizontalAlignment="Left" Margin="82,97,0,0"
+            VerticalAlignment="Top" 
+            FontFamily="Georgia" FontSize="16"
+            Width="719" FontWeight="Bold" Height="34" Grid.ColumnSpan="2"/>
+        <Label Name="label3"  Content="Клієнт, що купив найдорожче авто:" HorizontalAlignment="Left" Margin="13,129,0,0"
+            VerticalAlignment="Top" 
+            FontFamily="Georgia" FontSize="16"
+            Width="795" FontWeight="Bold" Height="37" Grid.ColumnSpan="2" />
+        <DataGrid x:Name="DataGrid2" HorizontalAlignment="Left" IsReadOnly="True"
+            Height="228" Margin="166.419,263,0,0" VerticalAlignment="Top"
+            Width="409" Grid.Column="1" />
+        <Label   Content="Оберіть місто:" HorizontalAlignment="Left" Margin="15,179,0,0"
+            VerticalAlignment="Top"  HorizontalContentAlignment="Center"
+            FontFamily="Georgia" FontSize="16"
+            Width="158" FontWeight="Bold" Height="37"  />
+        <Label   Content="Дилери" HorizontalAlignment="Left" Margin="20,225,0,0"
+            VerticalAlignment="Top"  HorizontalContentAlignment="Center"
+            FontFamily="Georgia" FontSize="16"
+            Width="407" FontWeight="Bold" Height="37" Grid.ColumnSpan="2"  />
+        <Label   Content="Покупці" HorizontalAlignment="Left" Margin="168.419,225,0,0"
+            VerticalAlignment="Top"  HorizontalContentAlignment="Center"
+            FontFamily="Georgia" FontSize="16"
+            Width="405" FontWeight="Bold" Height="37" Grid.Column="1"  />
+    </Grid>
+</Window>

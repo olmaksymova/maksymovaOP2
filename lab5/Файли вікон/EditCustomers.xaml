@@ -1,0 +1,131 @@
+﻿<Window x:Class="CourseWork.EditCustomers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork"
+        mc:Ignorable="d"
+        Title="Редагування таблиць бази даних" Height="707.912" Width="1356.594">
+    <Grid Name ="LayoutRoot" Background="AliceBlue" >
+        <Canvas Background="#FFBC0D3C" HorizontalAlignment="Left" Height="135" Margin="1042,73,0,0" VerticalAlignment="Top" Width="289"/>
+        <Canvas Background="#FF172696" HorizontalAlignment="Left" Height="537" Margin="24,73,0,0" VerticalAlignment="Top" Width="365" Name="Backgr"/>
+
+        <Button x:Name="ToStartwindow" Content="На головну" HorizontalAlignment="Left"
+Margin="908,617,0,0" VerticalAlignment="Top" Width="434"
+Height="50" Foreground="White" FontSize="24"
+FontFamily="Book Antiqua" FontWeight="Bold"
+Click="ToStartWindow_Click" BorderBrush="Black">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFBE0A39" Offset="0.005"/>
+                    <GradientStop Color="#FF85477E" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="AddBtn" Content="Додати"
+HorizontalAlignment="Left" Margin="6,617,0,0"
+VerticalAlignment="Top" Width="450" Height="50"
+Foreground="White" FontSize="24" FontFamily="Book Antiqua"
+FontWeight="Bold" Click="AddBtn_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF85477E"/>
+                    <GradientStop Color="#FF087DC3" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="RemoveBtn" Content="Видалити"
+HorizontalAlignment="Left" Margin="457,617,0,0"
+VerticalAlignment="Top" Width="450" Height="50"
+Foreground="White" FontSize="24" FontFamily="Book Antiqua"
+FontWeight="Bold" 
+Background="#FF85477E" Click="RemoveBtn_Click" BorderBrush="Black"/>
+        <TextBox x:Name="IDField" HorizontalAlignment="Left" Background="White"
+MaxLength="4" Height="28" Margin="1048,170,0,0"
+TextWrapping="Wrap" Text="-" VerticalAlignment="Top"
+Width="276" FontSize="16" TextAlignment="Center"
+FontFamily="Georgia"
+PreviewTextInput="IDField_PreviewTextInput"/>
+
+        <Image x:Name="CarPhoto" HorizontalAlignment="Left" 
+Height="142" Margin="37,456,0,0" VerticalAlignment="Top"
+Width="337" Source="DefaultPhoto.png"
+Stretch="Fill" />
+        <Label Background="AliceBlue"  Content="ID видалення" HorizontalAlignment="Left" Margin="1050,125,0,0"
+VerticalAlignment="Top"  HorizontalContentAlignment="Center"
+ FontFamily="Georgia" FontSize="16"
+Width="274" FontWeight="Bold" Height="37" />
+        <Label  Content="Видалення запису" HorizontalAlignment="Left" Margin="1050,82,0,0"
+VerticalAlignment="Top" HorizontalContentAlignment="Center"
+ FontFamily="Georgia" FontSize="16" Background="AliceBlue"
+Width="274" FontWeight="Bold" Height="34" FontStyle="Italic" />
+        <TextBlock Name="editTable" HorizontalAlignment="Center" Margin="-1,-1,5,0"
+TextWrapping="Wrap" VerticalAlignment="Top" Height="55"
+Width="1340" FontSize="36" TextAlignment="Center"
+FontFamily="Book Antiqua" FontWeight="Bold"
+Foreground="White" Text="Редагування таблиці">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="270" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF0C7BC1" Offset="0"/>
+                    <GradientStop Color="#FFBC0C3C" Offset="1"/>
+                    <GradientStop Color="#FF85477E" Offset="0.5"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <ComboBox x:Name="Customer" HorizontalAlignment="Left" 
+            Margin="160,168,0,0" VerticalAlignment="Top" Width="202" Height="28" Visibility="Hidden" />
+        <ComboBox x:Name="Dealers" HorizontalAlignment="Left"
+            Margin="160,203,0,0" VerticalAlignment="Top" Width="202" Height="28" Visibility="Hidden" />
+        <ComboBox x:Name="CBoxItems" HorizontalAlignment="Left"
+Margin="160,133,0,0" VerticalAlignment="Top" Width="202" 
+SelectionChanged="CBoxItems_SelectionChanged" Height="28" Visibility="Hidden"/>
+        <DataGrid Name="DataGrid1" HorizontalAlignment="Left" BorderThickness="10"
+Height="538" Margin="410,73,0,0" VerticalAlignment="Top"
+Width="618" 
+CellEditEnding="DataGrid1_CellEditEnding" MouseRightButtonUp="DataGrid1_MouseRightButtonUp" BorderBrush="#FF85477E"/>
+        <Label Content="Автомобіль" Name="first" 
+HorizontalAlignment="Left" Margin="33,135,0,0"
+VerticalAlignment="Top" RenderTransformOrigin="0.023,2.515" FontFamily="Georgia" FontSize="16"
+Width="231" FontWeight="Bold" Foreground="White" Visibility="Hidden"/>
+        <Label Content="Покупець" Name ="second" 
+            HorizontalAlignment="Left" Margin="33,169,0,0"
+            VerticalAlignment="Top" RenderTransformOrigin="0.023,2.515" FontFamily="Georgia" FontSize="16"
+            Width="231" FontWeight="Bold" Foreground="White" Visibility="Hidden"/>
+        <Label Content="Дилер" Name ="third" 
+            HorizontalAlignment="Left" Margin="33,207,0,0"
+            VerticalAlignment="Top" RenderTransformOrigin="0.023,2.515" FontFamily="Georgia" FontSize="16"
+            Width="231" FontWeight="Bold" Foreground="White" Visibility="Hidden"/>
+        <Label  Content="Додавання запису" HorizontalAlignment="Left" Margin="34,82,0,0"
+            VerticalAlignment="Top" HorizontalContentAlignment="Center"
+            FontFamily="Georgia" FontSize="16" Background="AliceBlue"
+            Width="339" FontWeight="Bold" Height="34" FontStyle="Italic" />
+        <Canvas Background="#FFBC0D3C"   HorizontalAlignment="Left" Height="391" Margin="1045,219,0,0" VerticalAlignment="Top" Width="283" x:Name="Backgr_Copy">
+            <Image Height="364" Canvas.Left="20" Canvas.Top="14" Width="249" Source="photo1.jpg" Stretch="Fill"/>
+        </Canvas>
+    </Grid>
+</Window>

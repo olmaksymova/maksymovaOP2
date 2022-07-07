@@ -1,0 +1,65 @@
+﻿<Window x:Class="CourseWork.DealerSelect"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork"
+        mc:Ignorable="d"
+        Title="Дилери" Height="564.706" Width="802.062">
+    <Grid Background="AliceBlue"   >
+        <DataGrid x:Name="DataGrid1" HorizontalAlignment="Left" IsReadOnly="True"
+            Height="249" Margin="15,170,0,0" VerticalAlignment="Top"
+            Width="539" SelectionChanged="DataGrid1_SelectionChanged" />
+        <Label Background="#FFBB0D3C"  Content="Фото дилера" HorizontalAlignment="Left" Margin="563,67,0,0"
+VerticalAlignment="Top"  HorizontalContentAlignment="Center"
+ FontFamily="Georgia" FontSize="16"
+Width="187" FontWeight="Bold" Height="37" Foreground="AliceBlue" />
+        <ComboBox x:Name="DealersCB" HorizontalAlignment="Left"
+Margin="14,67,0,0" VerticalAlignment="Top" Width="535" 
+SelectionChanged="CBoxItems_SelectionChanged" Height="34" FontSize="18" FontFamily="Times New Roman" />
+        <Button x:Name="ToStartwindow" Content="На головну" HorizontalAlignment="Left"
+            Margin="12,476,0,0" VerticalAlignment="Top" Width="774"
+            Height="50" Foreground="White" FontSize="24"
+            FontFamily="Book Antiqua" FontWeight="Bold"
+            Click="ToStartWindow_Click" BorderBrush="Black" OpacityMask="#FF1278BE" Background="#FF1776BB"/>
+        <TextBlock x:Name="editTable" Margin="1,0,2.6,0"
+            TextWrapping="Wrap" VerticalAlignment="Top" Height="55" FontSize="36" TextAlignment="Center"
+            FontFamily="Book Antiqua" FontWeight="Bold"
+            Foreground="White" Text="Дані дилерів">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="270" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF0C7BC1" Offset="0"/>
+                    <GradientStop Color="#FFBC0C3C" Offset="1"/>
+                    <GradientStop Color="#FF85477E" Offset="0.5"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <Image Name ="DealerPhoto" HorizontalAlignment="Left" Height="133" Margin="563,113,0,0" VerticalAlignment="Top" Width="119" OpacityMask="#FF85477E" Source="DefImage.png"/>
+        <Label Name="ContractCount"  Content="Кількість договорів:" HorizontalAlignment="Left" Margin="16,105,0,0"
+            VerticalAlignment="Top"  HorizontalContentAlignment="Left"
+            FontFamily="Georgia" FontSize="16"
+            Width="347" FontWeight="Bold" Height="34"  />
+        <Label x:Name="ContractsLabel"  Content="Договори" HorizontalAlignment="Left" Margin="17,136,0,0"
+            VerticalAlignment="Top"  HorizontalContentAlignment="Center"
+            FontFamily="Georgia" FontSize="16"
+            Width="534" FontWeight="Bold" Height="34"  />
+        <Button x:Name="OpenContract" Content="Відкрити договір" HorizontalAlignment="Left"
+            Margin="13,424,0,0" VerticalAlignment="Top" Width="541"
+            Height="33" Foreground="White" FontSize="16"
+            FontFamily="Book Antiqua" FontWeight="Bold"
+            BorderBrush="Black" OpacityMask="#FF1278BE" Background="#FF96356A" Click="OpenContract_Click"/>
+        <Label Background="#FFBB0D3C"  Content="Фото машини &#10;з договору" HorizontalAlignment="Left" Margin="563,264,0,0"
+            VerticalAlignment="Top"  HorizontalContentAlignment="Center"
+            FontFamily="Georgia" FontSize="16"
+            Width="203" FontWeight="Bold" Height="48" Foreground="AliceBlue" />
+        <Image x:Name ="CarPhoto" HorizontalAlignment="Left" Height="146" Margin="568,314,0,0" VerticalAlignment="Top" Width="202" OpacityMask="#FF85477E" Source="DefImage.png"/>
+    </Grid>
+</Window>

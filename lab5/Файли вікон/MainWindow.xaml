@@ -1,0 +1,49 @@
+﻿<Window x:Class="CourseWork.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork"
+        mc:Ignorable="d"
+        Title="База авто" Height="462.016" Width="713.751">
+    <Grid Margin="0,0,0.4,-5.4" >
+        <Grid.Background>
+            <ImageBrush ImageSource="backgr1.jpg"/>
+        </Grid.Background>
+        <Rectangle Fill="#FF1577BC" HorizontalAlignment="Left" Height="132" Margin="24,99,0,0" Stroke="Black" VerticalAlignment="Top" Width="321"/>
+        <Rectangle Fill="#FFB90F3F" HorizontalAlignment="Left" Height="132" Margin="357,99,0,0" Stroke="Black" VerticalAlignment="Top" Width="321"/>
+
+        <ComboBox x:Name="TableCB" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+Margin="35,140,0,0" VerticalAlignment="Top" Width="296"
+SelectedIndex="0" Height="35" SelectionChanged="TableCB_SelectionChanged" FontFamily="Georgia" FontSize="16" Background="#FFB90F3F" >
+            <ComboBoxItem Content="Автомобілі"/>
+            <ComboBoxItem Content="Дилери"/>
+            <ComboBoxItem Content="Власники авто"/>
+            <ComboBoxItem Content="Покупці"/>
+            <ComboBoxItem Content="Контракти"/>
+            <ComboBoxItem/>
+        </ComboBox>
+        <Button Name ="Car"  Content="Відкрити таблицю" HorizontalAlignment="Left" Height="35" Margin="35,189,0,0" VerticalAlignment="Top" Width="297" Click="Button_Click_1" FontFamily="Georgia" FontSize="16"/>
+        <Button Content="Виконати запит" Name ="RequestButton"  HorizontalAlignment="Left" Height="37" Margin="369,185,0,0" VerticalAlignment="Top" Width="297" Click="RequestButton_Click" FontFamily="Georgia" FontSize="16"/>
+        <Button Name="Exit" BorderThickness="3" Content="Вихід" HorizontalAlignment="Left" Height="37" Margin="29,235,0,0" VerticalAlignment="Top" Width="647" Click="Button_Click" FontFamily="Georgia" FontSize="16" Background="#FFEBEBF3"/>
+        <ComboBox x:Name="RequestCB" HorizontalAlignment="Left" HorizontalContentAlignment="Center"
+            Margin="368,142,0,0" VerticalAlignment="Top" Width="296"
+            SelectedIndex="0" Height="35" SelectionChanged="TableCB_SelectionChanged" VerticalContentAlignment="Center" FontFamily="Georgia" FontSize="16" Background="#FF1A1A1A">
+            <ComboBoxItem Content="Запит 1"/>
+            <ComboBoxItem Content="Запит 2"/>
+            <ComboBoxItem Content="Запит 3,4"/>
+            <ComboBoxItem Content="Запит 5"/>
+            <ComboBoxItem/>
+        </ComboBox>
+        <Label   Content="Оберіть таблицю для перегляду" HorizontalAlignment="Left" Margin="36,104,0,0"
+            VerticalAlignment="Top" FontFamily="Georgia" FontSize="16"
+            Width="296" FontWeight="Bold" Height="37" Foreground="White"  />
+        <TextBlock Margin="-2,-1,0,0"
+            TextWrapping="Wrap" VerticalAlignment="Top" Height="91" FontSize="36" TextAlignment="Center"
+            FontFamily="Book Antiqua" FontWeight="Bold"
+            Background="#FFD3BEFF"><Run Text="Довідкова служба з продажу автомобілів"/></TextBlock>
+        <Label   Content="Оберіть запит" HorizontalAlignment="Left" Margin="368,106,0,0"
+            VerticalAlignment="Top" FontFamily="Georgia" FontSize="16"
+            Width="296" FontWeight="Bold" Height="37" Foreground="White"  />
+    </Grid>
+</Window>

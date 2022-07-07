@@ -1,0 +1,95 @@
+﻿<Window x:Class="CourseWork.CarsData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork"
+        mc:Ignorable="d"
+        Title="Запити до машин" Height="673.466" Width="703.921">
+    <Grid Background="AliceBlue">
+        <Rectangle Fill="#4C000B97"  HorizontalAlignment="Left" Height="191" Margin="11,67,0,0" Stroke="Black" VerticalAlignment="Top" Width="661"/>
+
+        <Button x:Name="ToStartwindow" Content="На головну" HorizontalAlignment="Left"
+            Margin="10,585,0,0" Width="680" Foreground="White" FontSize="24"
+            FontFamily="Book Antiqua" FontWeight="Bold"
+            Click="ToStartWindow_Click" BorderBrush="Black" Background="#FFBB0E3E" Height="48" VerticalAlignment="Top"/>
+        <TextBlock x:Name="editTable" Margin="1,0,-2.8,0"
+            TextWrapping="Wrap" VerticalAlignment="Top" Height="55" FontSize="36" TextAlignment="Center"
+            FontFamily="Book Antiqua" FontWeight="Bold"
+            Foreground="White" Text="Запити до автомобілів">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="270" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF0C7BC1" Offset="0"/>
+                    <GradientStop Color="#FFBC0C3C" Offset="1"/>
+                    <GradientStop Color="#FF85477E" Offset="0.5"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <DataGrid x:Name="DataGrid1" HorizontalAlignment="Left" IsReadOnly="True"
+            Height="173" Margin="12,401,0,0" VerticalAlignment="Top"
+            Width="365" SelectionChanged="DataGrid1_SelectionChanged" />
+        <Label   Content="Ціна від" HorizontalAlignment="Left" Margin="153,79,0,0"
+            VerticalAlignment="Top" 
+            FontFamily="Georgia" FontSize="16"
+            Width="98" FontWeight="Bold" Height="34" Foreground="Black"  />
+        <TextBox x:Name="YearStart" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Margin="250,126,0,0" FontSize="16" FontFamily="Georgia" TextAlignment="Center" RenderTransformOrigin="0.506,0.551" MaxLength="4"/>
+        <Label   Content="до" HorizontalAlignment="Left" Margin="408,84,0,0"
+            VerticalAlignment="Top"  HorizontalContentAlignment="Center"
+            FontFamily="Georgia" FontSize="16"
+            Width="54" FontWeight="Bold" Height="27" Foreground="Black"  />
+        <TextBox x:Name ="YearEnd"  HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158" Margin="470,126,0,0" FontSize="16" FontFamily="Georgia" TextAlignment="Center" MaxLength="4"/>
+        <Label Content="Рік виготовлення з" HorizontalAlignment="Left" Margin="68,130,0,0"
+            VerticalAlignment="Top" 
+            FontFamily="Georgia" FontSize="16"
+            Width="182" FontWeight="Bold" Height="34" Foreground="Black"  />
+        <TextBox x:Name ="PriceStart"  HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158" Margin="250,82,0,0" FontSize="16" FontFamily="Georgia" TextAlignment="Center" MaxLength="9"/>
+        <Label   Content="по" HorizontalAlignment="Left" Margin="400,130,0,0"
+            VerticalAlignment="Top"  HorizontalContentAlignment="Center"
+            FontFamily="Georgia" FontSize="16"
+            Width="75" FontWeight="Bold" Height="27" Foreground="Black"  />
+        <TextBox x:Name ="PriceEnd"  HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158" Margin="470,82,0,0" FontSize="16" FontFamily="Georgia" TextAlignment="Center" MaxLength="9"/>
+        <Button x:Name="OK" Content="OK" HorizontalAlignment="Left"
+            Margin="14,263,0,0" VerticalAlignment="Top" Width="656"
+            Height="38" Foreground="White" FontSize="24"
+            FontFamily="Book Antiqua" FontWeight="Bold"
+            BorderBrush="Black" Click="OK_Click" Background="#FF1179BE"/>
+        <ComboBox x:Name="BrandsCB" HorizontalAlignment="Left"
+            Margin="257,214,0,0" VerticalAlignment="Top" Width="368" Height="34" FontSize="18" FontFamily="Times New Roman" 
+                  HorizontalContentAlignment="Center"/>
+        <Label   Content="Бажаний бренд" HorizontalAlignment="Left" Margin="104,217,0,0"
+            VerticalAlignment="Top"  
+            FontFamily="Georgia" FontSize="16"
+            Width="165" FontWeight="Bold" Height="34" Foreground="Black"  />
+        <Label Name="label" Content="Власник:" HorizontalAlignment="Left" Margin="19,313,0,0"
+            VerticalAlignment="Top" 
+            FontFamily="Georgia" FontSize="16"
+            Width="573" FontWeight="Bold" Height="34"  />
+        <Label Background="#FFBB0D3C"  Content="Фото машини" HorizontalAlignment="Left" Margin="393,355,0,0"
+            VerticalAlignment="Top"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            FontFamily="Georgia" FontSize="16"
+            Width="290" FontWeight="Bold" Height="47" Foreground="AliceBlue" />
+        <Image x:Name ="CarPhoto" HorizontalAlignment="Left" Height="162" Margin="395,407,0,0" VerticalAlignment="Top" Width="283" OpacityMask="#FF85477E" Source="DefImage.png"/>
+        <TextBox x:Name="MileageStart" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159" Margin="252,171,0,0" FontSize="16" FontFamily="Georgia" TextAlignment="Center" RenderTransformOrigin="0.506,0.551" MaxLength="9"/>
+        <TextBox x:Name ="MileageEnd"  HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159" Margin="471,171,0,0" FontSize="16" FontFamily="Georgia" TextAlignment="Center" MaxLength="9"/>
+        <Label Content="Пробіг (км) від" HorizontalAlignment="Left" Margin="105,173,0,0"
+            VerticalAlignment="Top" 
+            FontFamily="Georgia" FontSize="16"
+            Width="145" FontWeight="Bold" Height="34" Foreground="Black"  />
+        <Label   Content="до" HorizontalAlignment="Left" Margin="402,173,0,0"
+            VerticalAlignment="Top"  HorizontalContentAlignment="Center"
+            FontFamily="Georgia" FontSize="16"
+            Width="75" FontWeight="Bold" Height="27" Foreground="Black"  />
+        <Label Content="Автомобілі" HorizontalAlignment="Left" Margin="15,361,0,0"
+            VerticalAlignment="Top"  HorizontalContentAlignment="Center"
+            FontFamily="Georgia" FontSize="24"
+            Width="360" FontWeight="Bold" Height="34"  />
+    </Grid>
+</Window>
